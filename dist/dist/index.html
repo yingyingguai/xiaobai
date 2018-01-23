@@ -1,0 +1,52 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>secondproject</title><style media=screen>* {
+				margin: 0;
+				padding: 0
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			img {
+				vertical-align: middle;
+			}
+			
+			.child-view {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				transition: all .8s cubic-bezier(.55, 0, .1, 1);
+			}
+			
+			.slide-left-enter,
+			.slide-right-leave-active {
+				/*旧页面动画*/
+				transition: all .2s;
+				opacity: .2;
+				/*-webkit-transform: translate(10%, 0);*/
+				/*transform: translate(10%, 0);*/
+			}
+			
+			.slide-left-leave-active,
+			.slide-right-enter {
+				/*新页面动画*/
+				transition: all .8s;
+				opacity: .8;
+				/*-webkit-transform: translate(-10px, 0);*/
+				/*transform: translate(-10px, 0);*/
+			}</style><link href=./static/css/app.7f04303d44e63ca5f1232c4e935937d7.css rel=stylesheet></head><body><div id=app><transition :name=transitionName><router-view class=child-view></router-view></transition></div><script type=text/javascript src=./static/js/manifest.0cb7a43e7e5171bd9e6d.js></script><script type=text/javascript src=./static/js/vendor.9d2fc5e358b34355a12d.js></script><script type=text/javascript src=./static/js/app.def34656ac35daf44427.js></script></body><script type=text/javascript>//常用大小0.25rem左右
+		(function(win, doc) {
+			change();
+
+			function change() {
+				doc.documentElement.style.fontSize = doc.documentElement.clientWidth * 20 / 320 + 'px';
+			}
+			win.addEventListener('resize', change, false);
+			win.addEventListener('orientationchange', change, false);
+		})(window, document);</script></html>
